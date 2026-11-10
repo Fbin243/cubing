@@ -8,3 +8,37 @@
 .training-option { display: flex; align-items: center; justify-content: space-between; gap: .25rem; }
 .solve-details { flex-basis: 100%; min-width: 0; }
 .solve-details p { overflow-wrap: anywhere; }
+
+/* Keep the timer compact without stretching its controls to the sidebar. */
+.shell { padding-block: 24px; }
+header { align-items: center; margin-bottom: 20px; }
+header h1 { font-family: inherit; font-size: 11px; margin: 0; }
+.layout { align-items: start; }
+.timer-panel { min-height: 0; padding: 20px; }
+.panel-heading { align-items: flex-start; }
+.panel-heading > div { min-width: 0; }
+.panel-heading button { flex: none; font-size: 12px; }
+.scramble { margin: 8px 0; line-height: 1.6; }
+.timer-area { min-height: 200px; }
+.manual { margin-top: 12px; }
+aside { gap: 12px; }
+.box { padding: 16px; }
+.box select { margin-top: 10px; }
+.history li select { margin: 0; }
+.stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+.trend { height: 70px; }
+@media (min-width: 761px) {
+  .shell { height: 100dvh; display: flex; flex-direction: column; }
+  .import-lock { flex: 1; min-height: 0; }
+  .layout { height: 100%; min-height: 0; align-items: stretch; }
+  .timer-panel, aside { min-height: 0; overflow-y: auto; }
+  .timer-area { min-height: 120px; }
+}
+@media (max-width: 760px) {
+  .shell { padding: 20px 16px; }
+  header { align-items: flex-start; gap: 16px; }
+  .timer-panel { padding: 16px; }
+  .timer-area { min-height: 180px; }
+  .controls { flex-wrap: wrap; }
+  .panel-heading { flex-wrap: wrap; gap: 8px; }
+}

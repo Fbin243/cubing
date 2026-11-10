@@ -211,7 +211,7 @@ export default function App() {
   };
 
   return <main className="shell">
-    <header><div><span className="eyebrow">CUBING / 3×3×3</span><h1>Every turn, a step forward.</h1><p>A little space for your solves.</p></div><div className="header-actions"><button onClick={exportData}>Export data</button><label className="button">Import data<input type="file" accept="application/json" hidden disabled={loadingData || phase !== 'idle' || importing} onChange={(e) => { void importData(e.target.files?.[0]); e.currentTarget.value = ''; }} /></label></div></header>
+    <header><div><h1 className="eyebrow">CUBING / 3×3×3</h1></div><div className="header-actions"><button onClick={exportData}>Export data</button><label className="button">Import data<input type="file" accept="application/json" hidden disabled={loadingData || phase !== 'idle' || importing} onChange={(e) => { void importData(e.target.files?.[0]); e.currentTarget.value = ''; }} /></label></div></header>
     {storageError && <p className="error" role="alert">{storageError}</p>}
     {error && <p className="error" role="alert">{error}</p>}
     {importing && <p role="status">Importing backup…</p>}
